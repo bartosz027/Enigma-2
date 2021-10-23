@@ -1,0 +1,655 @@
+﻿<UserControl x:Class="EnigmaApp.View.PlugboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             
+             d:DesignWidth="800" d:DesignHeight="220">
+
+    <StackPanel HorizontalAlignment="Center"
+                Orientation="Horizontal">
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16"
+                   
+                   Content="Q"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="Q_Button"
+                    Background="{Binding ButtonColors[0]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16"
+                   
+                   Content="P"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="P_Button"
+                    Background="{Binding ButtonColors[17]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="A"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="A_Button"
+                    Background="{Binding ButtonColors[9]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16"
+                   
+                   Content="W"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="W_Button"
+                    Background="{Binding ButtonColors[1]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16"
+                   
+                   Content="Y"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="Y_Button"
+                    Background="{Binding ButtonColors[18]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="S"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="S_Button"
+                    Background="{Binding ButtonColors[10]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16"
+                   
+                   Content="E"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="E_Button"
+                    Background="{Binding ButtonColors[2]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="X"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="X_Button"
+                    Background="{Binding ButtonColors[19]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="D"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="D_Button"
+                    Background="{Binding ButtonColors[11]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="R"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="R_Button"
+                    Background="{Binding ButtonColors[3]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="C"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="C_Button"
+                    Background="{Binding ButtonColors[20]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="F"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="F_Button"
+                    Background="{Binding ButtonColors[12]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30" 
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="T"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="T_Button"
+                    Background="{Binding ButtonColors[4]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="V"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="V_Button"
+                    Background="{Binding ButtonColors[21]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="G"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="G_Button"
+                    Background="{Binding ButtonColors[13]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="Z"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="Z_Button"
+                    Background="{Binding ButtonColors[5]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="B"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="B_Button"
+                    Background="{Binding ButtonColors[22]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="H"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="H_Button"
+                    Background="{Binding ButtonColors[14]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="U"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="U_Button"
+                    Background="{Binding ButtonColors[6]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="N"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="N_Button"
+                    Background="{Binding ButtonColors[23]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="J"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="J_Button"
+                    Background="{Binding ButtonColors[15]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="I"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="I_Button"
+                    Background="{Binding ButtonColors[7]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="M"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="M_Button"
+                    Background="{Binding ButtonColors[24]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,52.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="K"/>
+
+            <Button VerticalAlignment="Center"
+                    
+                    Width="30" Height="30"
+                    Margin="0,17.5,0,0"
+                    
+                    x:Name="K_Button"
+                    Background="{Binding ButtonColors[16]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+        <Grid Width="45">
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Top"
+                   
+                   Width="30" Height="30"
+                   Margin="0,7.5,0,0"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="O"/>
+
+            <Button VerticalAlignment="Top"
+                    
+                    Width="30" Height="30"
+                    Margin="0,42.5,0,0"
+                    
+                    x:Name="O_Button"
+                    Background="{Binding ButtonColors[8]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+            <Label HorizontalContentAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   
+                   Width="30" Height="30"
+                   Margin="0,0,0,57.5"
+                   
+                   Foreground="#f8f8ff"
+                   FontSize="16" 
+                   
+                   Content="L"/>
+
+            <Button VerticalAlignment="Bottom"
+                    
+                    Width="30" Height="30"
+                    Margin="0,0,0,22.5"
+                    
+                    x:Name="L_Button"
+                    Background="{Binding ButtonColors[25]}"
+                    
+                    Command="{Binding PlugboardButtonCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+
+        </Grid>
+
+    </StackPanel>
+    
+</UserControl>

@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="EnigmaApp.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:cli="clr-namespace:CLI.ENIGMA;assembly=Core"
+             xmlns:controls="clr-namespace:EnigmaApp.Controls"
+             mc:Ignorable="d"
+             
+             d:DesignHeight="800" d:DesignWidth="200">
+
+    <StackPanel>
+
+        <Label HorizontalContentAlignment="Center"
+               Foreground="#f8f8ff"
+               Content="REFLECTOR"/>
+
+        <ComboBox Width="150"
+                  ItemsSource="{Binding Enigma.Components.Available.Reflectors}"
+                  SelectedItem="{Binding Enigma.Components.Configuration.Reflector}"
+                  AlternationCount="{Binding Enigma.Components.Available.Reflectors.Count}">
+
+            <i:Interaction.Triggers>
+
+                <i:EventTrigger EventName="SelectionChanged">
+
+                    <i:InvokeCommandAction Command="{Binding ReflectorComboBoxSelectedItemChanged}"/>
+
+                </i:EventTrigger>
+
+            </i:Interaction.Triggers>
+
+        </ComboBox>
+
+        <Label HorizontalContentAlignment="Center"
+               Foreground="#f8f8ff"
+               Content="ROTORS"/>
+
+        <Grid>
+
+            <Button HorizontalAlignment="Left"
+                    Content="-"
+                    
+                    Width="20"
+                    Margin="55,0,0,0"
+                    
+                    Command="{Binding RemoveRotorCommand}"/>
+
+            <TextBlock Text="{Binding Enigma.Components.Configuration.Rotors.Count}" 
+                       HorizontalAlignment="Center"
+                       
+                       Foreground="#f8f8ff"
+                       FontSize="16"/>
+
+            <Button HorizontalAlignment="Right"
+                    Content="+"
+                    
+                    Width="20"
+                    Margin="0,0,55,0"
+                    
+                    Command="{Binding AddRotorCommand}"/>
+
+        </Grid>
+
+        <Separator Margin="0,20,0,10"/>
+
+        <Grid>
+
+            <Label HorizontalAlignment="Left"
+                   Margin="20,0,0,0" 
+                   
+                   Foreground="#f8f8ff"
+                   Content="ROTOR"/>
+
+            <Label HorizontalAlignment="Right"
+                   Margin="0,0,33,0" 
+                   
+                   Foreground="#f8f8ff"
+                   Content="RING"/>
+
+        </Grid>
+
+        <ItemsControl ItemsSource="{Binding Enigma.Components.Configuration.Rotors}"
+                      AlternationCount="{Binding Enigma.Components.Configuration.Rotors.Count}">
+
+            <ItemsControl.Resources>
+
+                <DataTemplate DataType="{x:Type cli:Rotor}">
+
+                    <Grid Margin="0,0,0,10">
+
+                        <controls:ComboBoxWithCommand SelectedItem="{Binding Name}"
+                                                      HorizontalAlignment="Left"
+                                                      
+                                                      Margin="11,0,0,0"
+                                                      Width="65"
+                                                      
+                                                      EventName="SelectionChanged"
+                                                      
+                                                      ItemsSource="{Binding Path=DataContext.Enigma.Components.Available.Rotors, 
+                                                      RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                      
+                                                      Command="{Binding DataContext.RotorComboBoxSelectedItemChanged,
+                                                      RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                      CommandParameter="{Binding Path=(ItemsControl.AlternationIndex),
+                                                      RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+
+                        <Button HorizontalAlignment="Right"
+                                Content="-"
+                                
+                                Width="20" 
+                                Margin="0,0,74,0"
+                                
+                                Command="{Binding DataContext.DecreaseRingCommand,
+                                RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                CommandParameter="{Binding Path=(ItemsControl.AlternationIndex),
+                                RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+
+
+                        <TextBlock HorizontalAlignment="Right" 
+                                   TextAlignment="Center"
+                                   Text="{Binding Ring}"
+                                   
+                                   Foreground="#f8f8ff"
+                                   FontSize="16"
+                                   
+                                   Width="38"
+                                   Margin="0,0,33,0"/>
+
+                        <Button HorizontalAlignment="Right"
+                                Content="+"
+                                
+                                Width="20" 
+                                Margin="0,0,10,0"
+                                
+                                Command="{Binding DataContext.IncreaseRingCommand,
+                                RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                CommandParameter="{Binding Path=(ItemsControl.AlternationIndex),
+                                RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+
+                    </Grid>
+
+                </DataTemplate>
+
+            </ItemsControl.Resources>
+            
+        </ItemsControl>
+
+    </StackPanel>
+
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<Application x:Class="EnigmaApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             xmlns:view="clr-namespace:EnigmaApp.View"
+             xmlns:viewModel="clr-namespace:EnigmaApp.ViewModel"
+             
+             StartupUri="View/MainWindow.xaml">
+    
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type viewModel:EncryptionViewModel}">
+            <view:EncryptionView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:PlugboardViewModel}">
+            <view:PlugboardView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:RotorViewModel}">
+            <view:RotorView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+            <view:SettingsView/>
+        </DataTemplate>
+
+    </Application.Resources>
+    
+</Application>

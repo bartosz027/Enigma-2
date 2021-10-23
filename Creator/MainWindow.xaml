@@ -1,0 +1,239 @@
+﻿<Window x:Class="Element_Creator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        Title="Enigma Element Creator"
+        ResizeMode="CanMinimize"
+        
+        Width="770" Height="255">
+
+    <Grid Background="WhiteSmoke">
+
+        <Label HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               
+               Content="Element Name:"
+               Margin="10,10,0,0"/>
+        
+        <TextBox Name="ElementName_TextBox"
+                 TextWrapping="Wrap"
+                 TabIndex="1"
+                 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 
+                 Width="635" Height="23"
+                 Margin="105,13,0,0"
+                                  
+                 CharacterCasing="Upper"
+                 PreviewTextInput="ElementName_TextBox_PreviewTextInput"/>
+
+        <Label HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               
+               Content="Element Type:"
+               Margin="10,43,0,0"/>
+
+        <ComboBox HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  
+                  Width="499"
+                  Margin="105,45,0,0"
+                  
+                  SelectedIndex="0"
+                  TabIndex="2"
+            
+                  Name="ElementType_ComboBox"
+                  SelectionChanged="ElementType_ComboBox_SelectionChanged">
+            
+            <ComboBoxItem Content ="Rotor"/>
+            <ComboBoxItem Content ="Reflector"/>
+            
+        </ComboBox>
+
+        <Label Content="Turnover Position:"
+               
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               
+               Margin="609,43,0,0"
+               Width="106"/>
+        
+        <TextBox HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 TabIndex="3"
+                 
+                 Width="20" Height="20"
+                 Margin="720,47,0,0"
+                 
+                 Text="A"
+                 TextAlignment="Center"
+                 
+                 Name="TurnoverPosition_TextBox"
+                 PreviewKeyDown="TurnoverPosition_TextBox_PreviewKeyDown"/>
+
+        <Label Content="WIRES"
+               
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               
+               FontFamily="Calibri"
+               FontWeight="Bold"
+               FontSize="20"
+               
+               Width="64"
+               Margin="350,69,0,0"/>
+
+        <Label Content="A" Margin="10,97,0,0" Width="20" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="B" Margin="38,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="C" Margin="68,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="D" Margin="95,97,0,0" Width="20" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="E" Margin="125,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="F" Margin="153,97,0,0" Width="17" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="G" Margin="181,97,0,0" Width="20" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="H" Margin="209,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="I" Margin="241,97,0,0" Width="14" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="J" Margin="268,97,0,0" Width="15" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="K" Margin="295,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="L" Margin="324,97,0,0" Width="17" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="M" Margin="350,97,0,0" Width="24" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="N" Margin="380,97,0,0" Width="20" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="O" Margin="408,97,0,0" Width="21" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="P" Margin="438,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Q" Margin="466,97,0,0" Width="21" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="R" Margin="495,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="S" Margin="524,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="T" Margin="551,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="U" Margin="580,97,0,0" Width="21" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="V" Margin="609,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="W" Margin="634,97,0,0" Width="25" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="X" Margin="665,97,0,0" Width="19" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Y" Margin="694,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Z" Margin="722,97,0,0" Width="18" FontFamily="Calibri" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label Content="|" Margin="13,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="41,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="70,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="98,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="127,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="155,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="184,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="212,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="241,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="269,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="298,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="326,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="355,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="383,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="412,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="440,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="470,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="498,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="526,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="554,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="584,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="612,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="640,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="668,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="668,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="696,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="|" Margin="724,116,0,0" Width="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBox Name="WireOutput1_Textbox" Margin="11,144,0,0" Width="18" Height="20" TabIndex="4" Text="A" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput2_Textbox" Margin="39,144,0,0" Width="18" Height="20" TabIndex="5" Text="B" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput3_Textbox" Margin="68,144,0,0" Width="18" Height="20" TabIndex="6" Text="C" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput4_Textbox" Margin="96,144,0,0" Width="18" Height="20" TabIndex="7" Text="D" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput5_Textbox" Margin="125,144,0,0" Width="18" Height="20" TabIndex="8" Text="E" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput6_Textbox" Margin="153,144,0,0" Width="18" Height="20" TabIndex="9" Text="F" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput7_Textbox" Margin="182,144,0,0" Width="18" Height="20" TabIndex="10" Text="G" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput8_Textbox" Margin="210,144,0,0" Width="18" Height="20" TabIndex="11" Text="H" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput9_Textbox" Margin="239,144,0,0" Width="18" Height="20" TabIndex="12" Text="I" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput10_Textbox" Margin="267,144,0,0" Width="18" Height="20" TabIndex="13" Text="J" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput11_Textbox" Margin="296,144,0,0" Width="18" Height="20" TabIndex="14" Text="K" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput12_Textbox" Margin="324,144,0,0" Width="18" Height="20" TabIndex="15" Text="L" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput13_Textbox" Margin="353,144,0,0" Width="18" Height="20" TabIndex="16" Text="M" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput14_Textbox" Margin="381,144,0,0" Width="18" Height="20" TabIndex="17" Text="N" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput15_Textbox" Margin="410,144,0,0" Width="18" Height="20" TabIndex="18" Text="O" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput16_Textbox" Margin="438,144,0,0" Width="18" Height="20" TabIndex="19" Text="P" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput17_Textbox" Margin="468,144,0,0" Width="18" Height="20" TabIndex="20" Text="Q" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput18_Textbox" Margin="496,144,0,0" Width="18" Height="20" TabIndex="21" Text="R" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput19_Textbox" Margin="524,144,0,0" Width="18" Height="20" TabIndex="22" Text="S" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput20_Textbox" Margin="552,144,0,0" Width="18" Height="20" TabIndex="23" Text="T" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput21_Textbox" Margin="582,144,0,0" Width="18" Height="20" TabIndex="24" Text="U" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput22_Textbox" Margin="610,144,0,0" Width="18" Height="20" TabIndex="25" Text="V" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput23_Textbox" Margin="638,144,0,0" Width="18" Height="20" TabIndex="26" Text="W" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput24_Textbox" Margin="666,144,0,0" Width="18" Height="20" TabIndex="27" Text="X" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput25_Textbox" Margin="694,144,0,0" Width="18" Height="20" TabIndex="28" Text="Y" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+        <TextBox Name="WireOutput26_Textbox" Margin="722,144,0,0" Width="18" Height="20" TabIndex="29" Text="Z" TextAlignment="Center" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="WireOutput_Textbox_PreviewKeyDown"/>
+
+        <Label HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               
+               Content="Wires From String:"
+               Margin="10,177,0,0"/>
+        
+        <TextBox x:Name="WiresFromString_TextBox"
+                 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 
+                 Margin="117,180,0,0"
+                 Width="197" Height="23"
+                 
+                 TextWrapping="Wrap"
+                 TabIndex="30"/>
+        
+        <Button x:Name="Convert_Button"
+                Content="CONVERT"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                
+                Width="88" Height="23"
+                Margin="319,180,0,0"
+                
+                FontFamily="Calibri"
+                FontWeight="Bold"
+                FontSize="14"
+                
+                TabIndex="31"
+                Click="Convert_Button_Click"/>
+
+        <Button Name="LoadFile_Button"
+                Content="LOAD FILE"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                
+                Width="88" Height="23"
+                Margin="555,180,0,0"
+                
+                FontFamily="Calibri"
+                FontWeight="Bold"
+                FontSize="14"
+                
+                TabIndex="31"
+                Click="LoadFile_Button_Click"/>
+        
+        <Button Name="SaveFile_Button"
+                Content="SAVE FILE"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                
+                Width="88" Height="23"
+                Margin="652,180,0,0"
+                
+                FontFamily="Calibri"
+                FontWeight="Bold"
+                FontSize="14"
+                
+                TabIndex="32"
+                Click="SaveFile_Button_Click"/>
+        
+    </Grid>
+    
+</Window>

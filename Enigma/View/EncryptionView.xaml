@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="EnigmaApp.View.EncryptionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d"
+             
+             d:DesignWidth="800" d:DesignHeight="400">
+
+    <Grid>
+
+        <TextBox Text="{Binding Enigma.Message.Input, UpdateSourceTrigger=PropertyChanged}"
+                 HorizontalAlignment="Left"
+                 
+                 Width="350" Height="350"
+                 Margin="25,0,0,0"
+                 
+                 Background="#555555"
+                 Foreground="#f8f8ff"
+                 
+                 CharacterCasing="Upper"
+                 TextWrapping="Wrap">
+
+            <i:Interaction.Triggers>
+
+                <i:EventTrigger EventName="TextChanged">
+
+                    <i:InvokeCommandAction Command="{Binding InputTextBoxChangedCommand}"/>
+
+                </i:EventTrigger>
+                
+            </i:Interaction.Triggers>
+            
+        </TextBox>
+
+        <Label HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               
+               Foreground="#f8f8ff"
+               FontSize="32"
+               
+               Margin="0,0,0,15"
+               Content="➜"/>
+
+        <TextBox Text="{Binding Enigma.Message.Output}"
+                 HorizontalAlignment="Right"
+                 
+                 Width="350" Height="350"
+                 Margin="0,0,25,0"
+                 
+                 Background="#555555"
+                 Foreground="#f8f8ff"
+                 
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"/>
+
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,25 @@
+﻿<ComboBox x:Class="EnigmaApp.Controls.ComboBoxWithCommand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d" 
+             
+             d:DesignWidth="65" d:DesignHeight="20">
+
+    <i:Interaction.Triggers>
+
+        <i:EventTrigger EventName="{Binding Path=EventName,
+                        RelativeSource={RelativeSource AncestorType=ComboBox}}">
+
+            <i:InvokeCommandAction Command="{Binding Path=Command,
+                                   RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                   CommandParameter="{Binding Path=CommandParameter,
+                                   RelativeSource={RelativeSource AncestorType=ComboBox}}"/>
+
+        </i:EventTrigger>
+
+    </i:Interaction.Triggers>
+
+</ComboBox>
