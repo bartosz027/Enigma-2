@@ -1,0 +1,3 @@
+[submodule "Core/vendor/Enigma"]
+	path = Core/vendor/Enigma
+	url = https://github.com/bartosz027/Enigma
