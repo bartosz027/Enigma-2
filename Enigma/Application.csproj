@@ -182,7 +182,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Wrapper\Wrapper.vcxproj">
+    <ProjectReference Include="..\Core\Wrapper.vcxproj">
       <Project>{57075c89-8615-49c7-81fb-ac1951f3f5f9}</Project>
       <Name>Wrapper</Name>
     </ProjectReference>

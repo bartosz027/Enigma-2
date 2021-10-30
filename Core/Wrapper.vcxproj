@@ -46,13 +46,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\_Dependencies\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\_Dependencies\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\Core\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\Core\</IntDir>
     <TargetName>Core</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\_Dependencies\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\_Dependencies\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\Core\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\Core\</IntDir>
     <TargetName>Core</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -61,7 +61,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\Enigma\src;$(SolutionDir)Core\AES\src;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)vendor/Enigma/src;$(ProjectDir)vendor/Enigma/include;$(ProjectDir)vendor/Enigma/libs/AES/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -76,18 +76,18 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\Enigma\src;$(SolutionDir)Core\AES\src;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)vendor/Enigma/src;$(ProjectDir)vendor/Enigma/include;$(ProjectDir)vendor/Enigma/libs/AES/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AES\AES.vcxproj">
-      <Project>{8a3b3fc7-393f-4ef8-a3f9-a8b8af5b2413}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Enigma\Enigma.vcxproj">
+    <ProjectReference Include="vendor\Enigma\Enigma.vcxproj">
       <Project>{7735bc6b-8d2e-4fb0-9349-f27946a8881b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\Enigma\libs\AES\AES.vcxproj">
+      <Project>{8a3b3fc7-393f-4ef8-a3f9-a8b8af5b2413}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
