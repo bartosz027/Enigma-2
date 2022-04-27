@@ -4,7 +4,6 @@ using System.Windows.Input;
 namespace EnigmaApp.Core {
 
     public class RelayCommand : ICommand {
-
         public event EventHandler CanExecuteChanged {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
@@ -25,7 +24,6 @@ namespace EnigmaApp.Core {
 
         private Action<object> _Execute;
         private Func<object, bool> _CanExecute;
-
     }
 
 }

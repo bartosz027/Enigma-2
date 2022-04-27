@@ -4,7 +4,6 @@ using CLI_Enigma = CLI.ENIGMA.Enigma;
 namespace EnigmaApp.ViewModel {
 
     class RotorViewModel : ObservableObject {
-
         public RotorViewModel(CLI_Enigma enigma) {
             Enigma = enigma;
 
@@ -39,7 +38,6 @@ namespace EnigmaApp.ViewModel {
         // Commands
         public RelayCommand RotorKeyIncreaseCommand { get; set; }
         public RelayCommand RotorKeyDecreaseCommand { get; set; }
-
     }
 
 }

@@ -11,7 +11,6 @@ using CLI_Enigma = CLI.ENIGMA.Enigma;
 namespace EnigmaApp.ViewModel {
 
     class MainViewModel : ObservableObject {
-
         public MainViewModel() {
             try {
                 Enigma = new CLI_Enigma("Rotors", "Reflectors");
@@ -90,7 +89,6 @@ namespace EnigmaApp.ViewModel {
         // Commands
         public RelayCommand SaveSettingsCommand { get; set; }
         public RelayCommand LoadSettingsCommand { get; set; }
-
     }
 
 }

@@ -6,7 +6,6 @@ using CLI_Enigma = CLI.ENIGMA.Enigma;
 namespace EnigmaApp.ViewModel {
 
     class SettingsViewModel : ObservableObject {
-
         public SettingsViewModel(CLI_Enigma enigma) {
             Enigma = enigma;
 
@@ -70,7 +69,6 @@ namespace EnigmaApp.ViewModel {
 
         public RelayCommand RotorComboBoxSelectedItemChanged { get; set; }
         public RelayCommand ReflectorComboBoxSelectedItemChanged { get; set; }
-
     }
 
 }

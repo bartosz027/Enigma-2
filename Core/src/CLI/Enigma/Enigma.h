@@ -90,7 +90,7 @@ namespace CLI::ENIGMA {
 		// Decryption components (local)
 		CLI::ENIGMA::Components^ _Components;
 
-		// Encrypted and Decrypted message
+		// Encrypted and decrypted message
 		CLI::ENIGMA::Message^ _Message;
     };
 

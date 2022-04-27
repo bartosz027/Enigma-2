@@ -75,12 +75,12 @@ namespace CLI::ENIGMA {
 		PlugboardConnections->Clear();
 		Components->Configuration->Rotors->Clear();
 
-		// Set new data (local)
+		// Get settings (local)
 		const auto& components = m_Instance->GetComponents();
-		const auto& [plugboard, reflector, rotors] = components.Configuration;
+		const auto& [rotors, reflector] = components.Configuration;
 
 		// Load plugboard settings (local)
-		std::string connected_plugs = plugboard->GetConnectedPlugs();
+		std::string connected_plugs = m_Instance->GetConnectedPlugs();
 
 		for (int i = 0; i < connected_plugs.size(); i += 2) {
 			std::string plugs = "";
@@ -139,7 +139,8 @@ namespace CLI::ENIGMA {
 		Message->Output = ConvertTo<String^>(m_Instance->GetMessage().Output);
 
 		// Adds or removes rotors up to the given number (local) 
-		auto& [plugboard, reflector, rotors] = m_Instance->GetComponents().Configuration;
+		const auto& components = m_Instance->GetComponents();
+		const auto& [rotors, reflector] = components.Configuration;
 
 		int curr_count = Components->Configuration->Rotors->Count;
 		int difference = count - curr_count;

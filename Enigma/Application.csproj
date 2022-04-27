@@ -32,8 +32,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>$(SolutionDir)Build\Debug\bin\Enigma</OutputPath>
-    <IntermediateOutputPath>$(SolutionDir)Build\Debug\obj\Enigma</IntermediateOutputPath>
+    <OutputPath>$(SolutionDir)Build\Debug\bin\apps\$(AssemblyName)</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)Build\Debug\obj\apps\$(AssemblyName)</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -45,8 +45,8 @@
     <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>$(SolutionDir)Build\Release\bin\$(AssemblyName)</OutputPath>
-    <IntermediateOutputPath>$(SolutionDir)Build\Release\obj\$(AssemblyName)</IntermediateOutputPath>
+    <OutputPath>$(SolutionDir)Build\Release\bin\apps\$(AssemblyName)</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)Build\Release\obj\apps\$(AssemblyName)</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>

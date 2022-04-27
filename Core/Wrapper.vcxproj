@@ -46,14 +46,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\Core\</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\Core\</IntDir>
-    <TargetName>Core</TargetName>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\libs\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\libs\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\Core\</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\Core\</IntDir>
-    <TargetName>Core</TargetName>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\bin\libs\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\obj\libs\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

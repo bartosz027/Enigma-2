@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -16,18 +17,6 @@ namespace EnigmaApp.ViewModel {
 
         public PlugboardViewModel(CLI_Enigma enigma) {
             Enigma = enigma;
-
-            _DefaultColor = Brushes.DarkGray.GetValue(SolidColorBrush.ColorProperty).ToString();
-
-            _AvailableColors = new List<string>() {
-                "#FFFF4040", "#FFFFD100",
-                "#FFAEFF00", "#FFECFF00",
-                "#FF00A2FF", "#FF23CE4D",
-                "#FF00FF80", "#FF8756D3",
-                "#FF1745FF", "#FFB34FA3",
-                "#FF6100FF", "#FFFF59E9",
-                "#FF00FFFB"
-            };
 
             ButtonColors = new ObservableCollection<SolidColorBrush>() {
                 Brushes.DarkGray, Brushes.DarkGray,
@@ -43,6 +32,16 @@ namespace EnigmaApp.ViewModel {
                 Brushes.DarkGray, Brushes.DarkGray,
                 Brushes.DarkGray, Brushes.DarkGray,
                 Brushes.DarkGray, Brushes.DarkGray
+            };
+
+            _AvailableColors = new List<string>() {
+                "#FFFF4040", "#FFFFD100",
+                "#FFAEFF00", "#FFECFF00",
+                "#FF00A2FF", "#FF23CE4D",
+                "#FF00FF80", "#FF8756D3",
+                "#FF1745FF", "#FFB34FA3",
+                "#FF6100FF", "#FFFF59E9",
+                "#FF00FFFB"
             };
 
             _CharToIndexConverter = new List<Tuple<string, int>>() {
@@ -107,6 +106,8 @@ namespace EnigmaApp.ViewModel {
                     _PrevButtonID = null;
                 }
             });
+
+            _DefaultColor = Brushes.DarkGray.GetValue(SolidColorBrush.ColorProperty).ToString();
         }
 
         public void UpdateButtons() {
@@ -150,7 +151,6 @@ namespace EnigmaApp.ViewModel {
 
         // Commands
         public RelayCommand PlugboardButtonCommand { get; set; }
-
     }
 
 }
